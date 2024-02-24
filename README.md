@@ -2,6 +2,7 @@ This is a tool that can make rudimentary predictions of commodity prices.
 Current work is on cocoa price predictions.
 
 **DEVELOPERS**
+Setup: Please use the setupVirtualEnv.sh file to setup your virtual environment.
 Style: Please use parentheses for everything except for-loops.
 OOP: Please use OOP for as much as possible.
 Additionally: Please use other standard python conventions.
