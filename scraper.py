@@ -1,8 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 
-def check_keywords():
-    url = 'https://www.palmettopanthers.org'
+def check_keywords(url):
     reqs = requests.get(url)
     soup = BeautifulSoup(reqs.text, 'html.parser')
  
@@ -14,6 +13,5 @@ def check_keywords():
     
     return urls
     
-
 if __name__ == '__main__':
     print(check_keywords([]))
