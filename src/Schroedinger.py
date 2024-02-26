@@ -1,3 +1,3 @@
 from Scraper import *
 
-countryInput = input('Which country???')
+commodity_input = input('Which commodity? ')
