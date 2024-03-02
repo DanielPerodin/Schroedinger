@@ -7,4 +7,6 @@ class CommodityPredictor:
         self.commodity_input = commodity_input
         self.ticker = ticker
     def run(self):
-        Daniel = Scraper('https://www.barchart.com/futures/quotes/CC*0/futures-prices')
+        if self.commodity_input == 'cocoa':
+            Daniel = Scraper('https://www.barchart.com/futures/quotes/CC*0/futures-prices')
+            Daniel.open_website()
