@@ -1,5 +1,5 @@
 numpy
 pandas
-scikit-learn
 requests
 bs4
+tensorflow
