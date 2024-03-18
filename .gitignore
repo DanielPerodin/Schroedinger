@@ -6,3 +6,5 @@ include/
 lib/
 pyvenv.cfg
 Data/Weather/Ivory_Coast
+*.xlsx
+share/

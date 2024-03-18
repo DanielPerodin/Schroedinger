@@ -1,3 +1,3 @@
-1. Refactor scraper.py to be OOP.
-2. Implement cocoa commodity predictions.
-2a. We will use weather data, cocoa production data, cocoa export data, and producer country currency values. 
+1. Implement cocoa commodity predictions.
+1a. We will use weather data and cocoa production data.
+2. Write documentation for everything so far.
