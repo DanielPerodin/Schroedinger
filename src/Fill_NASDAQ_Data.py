@@ -30,6 +30,7 @@ def main():
     df = df.reindex(labels=range_date, method = 'bfill')
     df = df.reset_index()
     print(df) 
+    df.to_csv("./Data/NASDAQ/Cocoa_filled.csv",index=True)
 main()
 
 
