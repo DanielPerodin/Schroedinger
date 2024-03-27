@@ -27,6 +27,9 @@ def main():
         print(df)
     df['Date'] = pd.to_datetime(df['Date'])
     range_date = pd.date_range(start = df.loc['Date'].min(), end = df.loc['Date'].max())
+    df.set_index(keys='Date')
+    df.reindex(labels=range_date)
+    df.reset_index()
         
 main()
     
