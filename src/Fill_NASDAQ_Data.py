@@ -23,15 +23,16 @@ import os
 def main():
     file_path = input("Enter the path to the file: ")
     df = pd.read_csv(file_path)
-    if df is not None:
-        print(df)
+    df = df.drop_duplicates(subset = 'Date')
     df['Date'] = pd.to_datetime(df['Date'])
-    range_date = pd.date_range(start = df.loc['Date'].min(), end = df.loc['Date'].max())
-    df.set_index(keys='Date')
-    df.reindex(labels=range_date)
-    df.reset_index()
-        
+    range_date = pd.date_range(start = df['Date'].min(), end = df['Date'].max())
+    df = df.set_index(keys = 'Date')
+    df = df.reindex(labels=range_date, method = 'ffill')
+    df = df.reset_index()
+    print(df) 
 main()
+
+
     
 
 
