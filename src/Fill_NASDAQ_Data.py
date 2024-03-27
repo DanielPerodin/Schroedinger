@@ -1,25 +1,5 @@
-import numpy as np
 import pandas as pd
-import os
 
-# Example of variable
-# NASDAQ_data = pd.read_csv('../Data/NASDAQ/Cocoa.csv')
-
-# Example of if-else
-# if(condition):
-#     # Code
-# else:
-#     # Code
-
-# Example of for loop
-# for i in range(number of iterations):
-#     # Code
-
-# Example of while loop
-# while(condition):
-#     # Code
-
-# Example of function
 def main():
     file_path = input("Enter the path to the file: ")
     df = pd.read_csv(file_path)
@@ -29,14 +9,7 @@ def main():
     df = df.set_index(keys = 'Date')
     df = df.reindex(labels=range_date, method = 'bfill')
     df = df.reset_index()
-    print(df) 
-    df.to_csv("./Data/NASDAQ/Cocoa_filled.csv",index=True)
-main()
-
-
+    df.rename(columns={'index':'Date'}, inplace=True)
+    df.to_csv("./Data/NASDAQ/Cocoa_filled.csv",index=False)
     
-
-
-#create individual months and their conditions (numDays, holidays, leapYear(February), etc.)
-
- 
+main()
