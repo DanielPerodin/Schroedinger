@@ -25,6 +25,8 @@ def main():
     df = pd.read_csv(file_path)
     if df is not None:
         print(df)
+    df['Date'] = pd.to_datetime(df['Date'])
+    range_date = pd.date_range(start = df.loc['Date'].min(), end = df.loc['Date'].max())
         
 main()
     
