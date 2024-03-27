@@ -26,15 +26,8 @@ def main():
     if df is not None:
         print(df)
         
-if __name__ == "__main__":
-    main()
-
-def fill_missing_values(df):
-    df['Date'] = pd.to_datetime(df['Date'], format='%m/%d/%Y')
+main()
     
-
-
-print("Hello world")
 
 
 #create individual months and their conditions (numDays, holidays, leapYear(February), etc.)
